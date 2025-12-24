@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const API_URL = 'https://6946cb9bca6715d122f8eca3.mockapi.io/projects';
 
@@ -30,7 +31,6 @@ function ProjectsList() {
 
   if (loading) return <p className="text-center py-20 text-lg">Chargement...</p>;
   if (error) return <p className="text-center text-red-600 py-20">{error}</p>;
-
 
   return (
     <section className="bg-gradient-to-br from-gray-50 via-white to-gray-50 min-h-screen py-20 px-6">
@@ -72,9 +72,9 @@ function ProjectsList() {
                 {project.title}
               </h2>
 
-              {/* Bouton */}
-              <a
-                href={`/projects/${project.id}`}
+              {/* Bouton avec Link */}
+              <Link
+                to={`/projects/${project.id}`}
                 className="flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 text-white transition-all duration-300 group-hover:from-indigo-700 group-hover:to-indigo-800 group-hover:shadow-lg group-hover:shadow-indigo-200"
               >
                 Voir les détails
@@ -86,7 +86,7 @@ function ProjectsList() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </article>
           ))}
         </div>
@@ -108,7 +108,5 @@ function ProjectsList() {
     </section>
   );
 }
-
-
 
 export default ProjectsList;

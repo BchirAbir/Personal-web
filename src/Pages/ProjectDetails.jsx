@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-// URL de l'API
 const API_URL = "https://6946cb9bca6715d122f8eca3.mockapi.io/projects";
 
 function ProjectDetails() {
@@ -12,10 +11,9 @@ function ProjectDetails() {
   useEffect(() => {
     async function loadProject() {
       try {
-        // On récupère directement le projet via ?id=...
         const res = await fetch(`${API_URL}/?id=${id}`);
         const data = await res.json();
-        setProject(data[0] || null); // data est un tableau contenant un seul projet
+        setProject(data[0] || null);
       } catch (error) {
         console.error("Erreur lors du chargement du projet :", error);
         setProject(null);
@@ -49,7 +47,6 @@ function ProjectDetails() {
     <section className="bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen py-32 px-6">
       <div className="max-w-3xl mx-auto">
 
-        {/* Retour */}
         <Link
           to="/projects"
           className="inline-flex items-center gap-2 mb-10 text-sm font-medium text-indigo-600 hover:text-indigo-800 transition"
@@ -57,20 +54,14 @@ function ProjectDetails() {
           ← Retour aux projets
         </Link>
 
-        {/* Card */}
         <article className="bg-white rounded-3xl border border-indigo-100 shadow-md overflow-hidden">
-
-          {/* Header */}
           <header className="px-10 py-12 bg-gradient-to-r from-indigo-600 to-purple-600">
             <h1 className="text-4xl font-semibold text-white leading-tight">
               {project.title}
             </h1>
           </header>
 
-          {/* Content */}
           <div className="px-10 py-12 space-y-14">
-
-            {/* Description */}
             <section>
               <h2 className="text-xs font-semibold text-indigo-600 uppercase tracking-widest mb-4">
                 Description
@@ -81,7 +72,6 @@ function ProjectDetails() {
               </p>
             </section>
 
-            {/* Technologies */}
             {project.technologies && project.technologies.length > 0 && (
               <section>
                 <h2 className="text-xs font-semibold text-indigo-600 uppercase tracking-widest mb-4">
@@ -99,7 +89,6 @@ function ProjectDetails() {
                 </div>
               </section>
             )}
-
           </div>
         </article>
       </div>
