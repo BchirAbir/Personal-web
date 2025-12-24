@@ -1,0 +1,93 @@
+{
+  "formSubmissions": [
+    [
+  {
+    "id": "1",
+    "nom": "Abir Bchir",
+    "email": "abir.bchir@example.com",
+    "message": "Bonjour, je souhaite collaborer avec vous.",
+    "priorite": "haute",
+    "status": "new",
+    "createdAt": "2025-12-23T10:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "nom": "John Doe",
+    "email": "john.doe@example.com",
+    "message": "Pouvez-vous m’envoyer plus d’infos ?",
+    "priorite": "moyenne",
+    "status": "new",
+    "createdAt": "2025-12-23T12:15:00.000Z"
+  },
+  {
+    "id": "3",
+    "nom": "Alice Martin",
+    "email": "alice.martin@example.com",
+    "message": "Merci pour votre réponse rapide.",
+    "priorite": "basse",
+    "status": "read",
+    "createdAt": "2025-12-23T14:30:00.000Z"
+  }
+]
+  ],
+  "projects": [
+  {
+    "id": 1,
+    "title": "E-FastOrder",
+    "description": "Application web de commande en ligne avec gestion du panier et des commandes.",
+    "technologies": [
+      "ASP.NET Core MVC",
+      "ADO.NET",
+      "SQL Server"
+    ],
+    "github": "https://github.com/BchirAbir"
+  },
+  {
+    "id": 2,
+    "title": "Application Microservices – Spring Boot",
+    "description": "Application basée sur une architecture microservices pour la gestion des commandes.",
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "REST API"
+    ],
+    "github": "https://github.com/BchirAbir"
+  },
+  {
+    "id": 3,
+    "title": "Portfolio personnel – React",
+    "description": "Portfolio web présentant mes projets, compétences et expériences.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "github": "https://github.com/BchirAbir"
+  },
+  {
+    "id": 4,
+    "title": "Habit Bloom",
+    "description": "Application mobile de suivi d’habitudes et de productivité.",
+    "technologies": [
+      "Flutter",
+      "Dart"
+    ],
+    "github": "https://github.com/BchirAbir"
+  },
+  {
+    "id": 5,
+    "title": "Jeux Unity 2D / 3D",
+    "description": "Développement d’un jeu Air Hockey 2D et d’un mini-jeu 3D.",
+    "technologies": [
+      "C#",
+      "Unity"
+    ],
+    "github": "https://github.com/BchirAbir"
+  }
+  
+],
+  "users": [
+    { "id": 1, "name": "Abir Bchir", "email": "abir@example.com", "role": "admin" }
+  ]
+}
