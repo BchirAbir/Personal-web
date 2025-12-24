@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-// Mise à jour de l'URL de l'API
-const API_URL = 'https://6946cb9bca6715d122f8eca3.mockapi.io/projects';
+// URL de l'API
+const API_URL = "https://6946cb9bca6715d122f8eca3.mockapi.io/projects";
 
 function ProjectDetails() {
   const { id } = useParams();
@@ -10,26 +10,21 @@ function ProjectDetails() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function load() {
+    async function loadProject() {
       try {
-        // Ajout du paramètre "id" dans l'URL
-        const res = await fetch(`${API_URL}?id=${id}`);
+        // On récupère directement le projet via ?id=...
+        const res = await fetch(`${API_URL}/?id=${id}`);
         const data = await res.json();
-
-        // Comparaison sécurisée (string / number)
-        const foundProject = data.find(
-          (p) => String(p.id) === String(id)
-        );
-
-        setProject(foundProject || null);
-      } catch (err) {
-        console.error(err);
+        setProject(data[0] || null); // data est un tableau contenant un seul projet
+      } catch (error) {
+        console.error("Erreur lors du chargement du projet :", error);
+        setProject(null);
       } finally {
         setLoading(false);
       }
     }
 
-    load();
+    loadProject();
   }, [id]);
 
   if (loading) {
