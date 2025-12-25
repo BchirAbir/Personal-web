@@ -10,7 +10,7 @@ const Statistics = () => {
 
   // Charger utilisateurs
   useEffect(() => {
-    fetch("http://localhost:4000/users")
+    fetch("https://694d4622ad0f8c8e6e204004.mockapi.io/user")
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(() => setUsers([]));
@@ -18,7 +18,7 @@ const Statistics = () => {
 
   // Charger projets
   useEffect(() => {
-    fetch("http://localhost:4000/projects")
+    fetch("https://6946cb9bca6715d122f8eca3.mockapi.io/projects")
       .then(res => res.json())
       .then(data => setProjects(data))
       .catch(() => setProjects([]));

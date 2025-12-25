@@ -11,7 +11,7 @@ const AdminUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("http://localhost:4000/users");
+        const res = await fetch("https://694d4622ad0f8c8e6e204004.mockapi.io/user");
         if (!res.ok) throw new Error("Erreur lors du chargement des utilisateurs");
         const data = await res.json();
         setUsers(data);
