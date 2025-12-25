@@ -7,7 +7,7 @@ import {
   FaCheckCircle,
   FaExclamationTriangle,
 } from "react-icons/fa";
-import { sendEmail } from "../../services/emailService";
+import { sendEmail } from "../../Services/emailService";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
