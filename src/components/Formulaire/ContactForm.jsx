@@ -7,19 +7,11 @@ import {
   FaCheckCircle,
   FaExclamationTriangle,
 } from "react-icons/fa";
-<<<<<<< HEAD
 import { sendEmail } from "../../services/emailService";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const FormulaireG6 = () => {
-=======
-import { sendEmail } from "../../Services/emailService";
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 const ContactForm = () => {
->>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f
   const [formData, setFormData] = useState({
     nom: "",
     email: "",
@@ -42,7 +34,7 @@ const ContactForm = () => {
     sended: false,
   });
 
-  // ✅ Validation automatique
+  // Validation automatique
   useEffect(() => {
     const nomValid = formData.nom.length >= 3;
     const emailValid = emailRegex.test(formData.email);
@@ -118,11 +110,8 @@ const ContactForm = () => {
           </div>
         )}
 
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-xl shadow-lg space-y-6"
-        >
-          {/* NOM */}
+        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg space-y-6">
+
           <div>
             <label className="flex gap-2 font-semibold mb-1">
               <FaUser /> Nom
@@ -141,7 +130,6 @@ const ContactForm = () => {
             )}
           </div>
 
-          {/* EMAIL */}
           <div>
             <label className="flex gap-2 font-semibold mb-1">
               <FaEnvelope /> Email
@@ -160,7 +148,6 @@ const ContactForm = () => {
             )}
           </div>
 
-          {/* MESSAGE */}
           <div>
             <label className="flex gap-2 font-semibold mb-1">
               <FaCommentDots /> Message
@@ -180,7 +167,6 @@ const ContactForm = () => {
             )}
           </div>
 
-          {/* PRIORITÉ */}
           <select
             name="priorité"
             value={formData.priorité}
@@ -192,7 +178,6 @@ const ContactForm = () => {
             <option value="basse">🟢 Basse</option>
           </select>
 
-          {/* BOUTON */}
           <button
             type="submit"
             disabled={!formValid.send || formValid.sending}
@@ -211,8 +196,4 @@ const ContactForm = () => {
   );
 };
 
-<<<<<<< HEAD
-export default FormulaireG6;
-=======
 export default ContactForm;
->>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f
