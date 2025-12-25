@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
+=======
+import { Link } from "react-router-dom";
+>>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f
 
 const API_URL = 'https://6946cb9bca6715d122f8eca3.mockapi.io/projects';
 
@@ -31,7 +35,10 @@ function ProjectsList() {
   if (loading) return <p className="text-center py-20 text-lg">Chargement...</p>;
   if (error) return <p className="text-center text-red-600 py-20">{error}</p>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f
   return (
     <section className="bg-gradient-to-br from-gray-50 via-white to-gray-50 min-h-screen py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -72,9 +79,15 @@ function ProjectsList() {
                 {project.title}
               </h2>
 
+<<<<<<< HEAD
               {/* Bouton */}
               <a
                 href={`/projects/${project.id}`}
+=======
+              {/* Bouton avec Link */}
+              <Link
+                to={`/projects/${project.id}`}
+>>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f
                 className="flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 text-white transition-all duration-300 group-hover:from-indigo-700 group-hover:to-indigo-800 group-hover:shadow-lg group-hover:shadow-indigo-200"
               >
                 Voir les détails
@@ -86,7 +99,11 @@ function ProjectsList() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
+<<<<<<< HEAD
               </a>
+=======
+              </Link>
+>>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f
             </article>
           ))}
         </div>
@@ -109,6 +126,10 @@ function ProjectsList() {
   );
 }
 
+<<<<<<< HEAD
 
 
 export default ProjectsList;
+=======
+export default ProjectsList;
+>>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f

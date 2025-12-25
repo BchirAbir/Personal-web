@@ -7,11 +7,19 @@ import {
   FaCheckCircle,
   FaExclamationTriangle,
 } from "react-icons/fa";
+<<<<<<< HEAD
 import { sendEmail } from "../../services/emailService";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const FormulaireG6 = () => {
+=======
+import { sendEmail } from "../../Services/emailService";
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const ContactForm = () => {
+>>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f
   const [formData, setFormData] = useState({
     nom: "",
     email: "",
@@ -203,4 +211,8 @@ const FormulaireG6 = () => {
   );
 };
 
+<<<<<<< HEAD
 export default FormulaireG6;
+=======
+export default ContactForm;
+>>>>>>> 1cc6c8ff779fa9b0ab6e80303921afb431b05a1f
